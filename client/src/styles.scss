@@ -1,0 +1,26 @@
+$enable-responsive-font-sizes: true;
+@import url("https://use.typekit.net/kwt1fiv.css");
+
+$font-family-base: 'capitolina', serif;
+
+@import './theme-colors.scss';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'capitolina', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+	background-color: #FFF;
+	background-image: linear-gradient(rgba(250,248,243,1), rgba(247,243,235,1));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#FAF8F3), color-stop(0%,#F7F3EB)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #FAF8F3 0%,#F7F3EB 100%); /* Chrome10+,Safari5.1+ */
+	color: $primary;
+	font-family: 'capitolina', sans-serif;
+	height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
