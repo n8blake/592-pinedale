@@ -1,23 +1,3 @@
-/*$theme-colors: (
-	"primary": #004454,
-	"secondary":#53CEF4,
-	"danger":#840D1F,
-	"warning":#F4C653,
-	"success":#80C941,
-	"info":#5385F4,
-	"dark":#736357
-);*/
-/*
-$blue:    #0d6efd;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #d63384;
-$red:     #dc3545;
-$orange:  #fd7e14;
-$yellow:  #ffc107;
-$green:   #198754;
-$teal:    #20c997;
-$cyan:    #0dcaf0;*/
 
 $slammin-salmon: #F7525F;
 $dark-red : #720618;
@@ -32,10 +12,16 @@ $yellow : #EFA716;
 $dark-yellow : #775105;
 $light-yellow : #E5D9BE;
 
+//greens
 $green : #1CD37F;
 $dark-green : #448E6E;
 $light-green : #8FE5BD;
+$mint: #8FE5BD;
+$pine: #095143;
+$sage: #448E6E;
+$lime: #1CD37F;
 
+// blues
 $cyan : #53CEF4;
 $light-cyan : #BBE8F2;
 $dark-teal : #004454;
@@ -52,6 +38,10 @@ $brown : #998675;
 $dark-brown : #736357;
 $light-brown : #C7B299;
 $latte : #EFE3D5;
+
+$chocolate: #42210B;
+$hazelnut: #A07055;
+$creamsicle: #E8C0AA;
 
 $sparkeling: #F7F3EB;
 $deep-merlot: #350913;
@@ -70,16 +60,16 @@ $gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
-$black:    #000;
+$black:    #000000;
 
-$primary:       $dark-red;
-$secondary:     $light-pink;
-$success:       $green;
+$primary:       $pine;
+$secondary:     $mint;
+$success:       $lime;
 $info:          $blue;
 $warning:       $yellow;
 $danger:        $red;
-$light:         $sparkeling;
-$dark:          $deep-merlot;
+$light:         $creamsicle;
+$dark:          $chocolate;
 
 $theme-colors: (
   "primary":    $primary,
@@ -94,5 +84,8 @@ $theme-colors: (
   "rose":       $rose,
   "blush":      $blush,
   "chenin-blanc": $chenin-blanc,
-  "burgundy":   $dark-red
+  "burgundy":   $dark-red,
+  "pine":       $pine,
+  "chocolate":  $chocolate,
+  "hazelnut":   $hazelnut
 );
