@@ -1,0 +1,14 @@
+@import '../../../theme-colors.scss';
+
+.wine-list-item {
+    margin: 10pt;
+}
+
+.wine-title {
+    font-size: 14pt;
+    color: $dark;
+}
+
+.wine-details {
+    font-style: italic;
+}

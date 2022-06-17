@@ -1,1 +1,5 @@
-<p>beer-list-item works!</p>
+<div class="beer-list-item">
+    <div class="beer-title" >{{beer.name}}</div>
+    <div class="beer-details text-hazelnut">{{beer.type}} <span *ngIf="beer.abv">, {{beer.abv | percent}}</span>
+    </div>
+</div>

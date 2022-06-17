@@ -1,0 +1,15 @@
+@import '../../../theme-colors.scss';
+
+.beer-list-item {
+    margin: 10pt;
+    text-align: center;
+}
+
+.beer-title {
+    font-size: 14pt;
+    color: $dark;
+}
+
+.beer-details {
+    font-style: italic;
+}

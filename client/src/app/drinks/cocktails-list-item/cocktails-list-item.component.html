@@ -1,1 +1,7 @@
-<p>cocktails-list-item works!</p>
+<div class="cocktail-list-item">
+    <div class="cocktail-title">{{cocktail.name}}</div>
+    <div class="cocktail-details text-hazelnut" *ngIf="cocktail.components">
+        <span *ngFor="let component of cocktail.components">{{component}}<ng-container *ngIf="cocktail.components.indexOf(component) < cocktail.components.length - 1">, </ng-container>
+        </span>
+    </div>
+</div>

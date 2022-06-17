@@ -1,0 +1,15 @@
+@import '../../../theme-colors.scss';
+
+.whiskey-list-item {
+    margin: 10pt;
+    text-align: center;
+}
+
+.whiskey-title {
+    font-size: 14pt;
+    color: $dark;
+}
+
+.whiskey-details {
+    font-style: italic;
+}

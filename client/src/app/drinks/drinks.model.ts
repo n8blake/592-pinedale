@@ -1,7 +1,9 @@
 export interface Drink {
     id: number, 
     name: string,
-    description?: string
+    description?: string,
+    imageUrl?: string,
+    abv?: number
 }
 
 export interface Wine extends Drink {
@@ -11,6 +13,8 @@ export interface Wine extends Drink {
     vintage?: number,
     type?: string,
     color?: string,
+    country?: string,
+    region?: string,
     composition?: Array<any>,
     tastingNotes?: Array<string>,
     pickedBy?: Array<string>,
@@ -19,17 +23,25 @@ export interface Wine extends Drink {
 
 export interface Beer extends Drink {
     id: number,
-    name: string
+    name: string,
+    brewery?: string,
+    country?: string,
+    type?: string
 }
 
 export interface Cocktial extends Drink {
     id: number,
-    name: string
+    name: string,
+    components?: Array<string>
 }
 
 export interface Whiskey extends Drink {
     id: number,
-    name: string
+    name: string,
+    type?: string,
+    country?: string,
+    region?: string,
+    age?: number
 }
 
 export enum Drinks {

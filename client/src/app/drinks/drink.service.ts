@@ -25,13 +25,22 @@ export class DrinkService {
     return {id: 0, name: '', description: 'No drink found.'}
   }
 
+  addDrink(type: Drinks, drink: Drink){
+    
+  }
+
   
 }
 
 const COCKTAILS: Cocktial[] = [
   {
     id: 10,
-    name: "Mint Julep"
+    name: "Mint Julep",
+    components: [
+      "bourbon",
+      "mint",
+      "bitters"
+    ]
   }
 ]
 const BEERS: Beer[] = [
@@ -43,7 +52,11 @@ const BEERS: Beer[] = [
 const WHISKIES: Whiskey[] = [
   {
     id: 12,
-    name: "Dewars 12"
+    name: "Dewars 12",
+    type: "Scotch",
+    age: 12,
+    country: "Scotland",
+    description: "A perfectly balanced marriage of carefully selected 12 year old malt and grain Scotch whiskies, created by Dewar's Master Blender. Marrying these superb whiskies adds a smoothness that your taste will at once discern. Rich, well rounded finish, with just a hint of oak."
   }
 ]
 const WINES: Wine[] = [
@@ -54,6 +67,8 @@ const WINES: Wine[] = [
     vintage:2017,
     type:'red',
     color: 'red',
+    country: 'USA',
+    region:'Napa Valley',
     composition:[{
       percentage: 1,
       grape: 'Cabernet Franc'
@@ -69,6 +84,8 @@ const WINES: Wine[] = [
     vintage:2017,
     type:'red',
     color: 'red',
+    country: 'France',
+    region: 'Rhône',
     composition:[
       {
         percentage: .72,
@@ -94,6 +111,7 @@ const WINES: Wine[] = [
     vintage:2018,
     type:'red',
     color: 'red',
+    region: 'Lodi',
     composition:[
       {
         percentage: .8,
@@ -130,6 +148,8 @@ const WINES: Wine[] = [
     vintage:2018,
     type:'red',
     color: 'red',
+    country: 'Italy',
+    region: 'Chianti',
     composition:[{
       percentage: 1,
       grape: 'Sangiovese'
@@ -145,6 +165,7 @@ const WINES: Wine[] = [
     vintage:2021,
     type:'rose',
     color: 'rose',
+    country: 'France',
     composition:[{
       percentage: 1,
       grape: 'Pinot Noir'

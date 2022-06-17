@@ -1,0 +1,15 @@
+@import '../../../theme-colors.scss';
+
+.cocktail-list-item {
+    text-align: center;
+}
+
+.cocktail-title {
+    font-size: 14pt;
+    font-weight: bolder;
+    color: $dark;
+}
+
+.cocktail-details {
+    font-style: italic;
+}
