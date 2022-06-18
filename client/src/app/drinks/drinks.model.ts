@@ -15,10 +15,15 @@ export interface Wine extends Drink {
     color?: string,
     country?: string,
     region?: string,
-    composition?: Array<any>,
+    composition?: Array<WineComposition>,
     tastingNotes?: Array<string>,
     pickedBy?: Array<string>,
     imageUrl?: string
+}
+
+export interface WineComposition {
+    grape: string,
+    percentage: number
 }
 
 export interface Beer extends Drink {
