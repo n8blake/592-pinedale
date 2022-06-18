@@ -1,10 +1,13 @@
 @import '../../../theme-colors.scss';
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0pt;
     width: 100%;
-    margin-bottom: 10pt;
+    background-color: #FFF9;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background-blend-mode: multiply;    
 }
 
 .nav {
@@ -14,6 +17,7 @@ footer {
 
 .nav > a {
     padding: 10pt;
+    margin: 10pt;
 }
 
 .active {
