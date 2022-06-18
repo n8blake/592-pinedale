@@ -1,0 +1,50 @@
+<form>
+    <div class="mb-3">
+        <label for="wine-name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="wine-name" id="wine-name" placeholder="name" [(ngModel)]="wine.name" />
+    </div>
+    <div class="mb-3">
+        <label for="wine-type" class="form-label">Type</label>
+        <input type="text" class="form-control" name="whiskey-type" id="wine-type" placeholder="type" [(ngModel)]="wine.type">
+    </div>
+    <div class="mb-3">
+        <label for="wine-vintage" class="form-label">Vintage</label>
+        <input type="number" class="form-control" name="wine-vintage" id="wine-vintage" placeholder="vintage, e.g. 2012" [(ngModel)]="wine.vintage">
+    </div>
+    <div class="mb-3">
+        <label for="wine-color" class="form-label">Color</label>
+        <input type="text" class="form-control" name="wine-color" id="wine-color" placeholder="color" [(ngModel)]="wine.region">
+    </div>
+    <div class="mb-3">
+        <label for="wine-region" class="form-label">Region</label>
+        <input type="text" class="form-control" name="wine-region" id="wine-region" placeholder="region" [(ngModel)]="wine.region">
+    </div>
+    <div class="mb-3">
+        <label for="wine-country" class="form-label">Country</label>
+        <input type="text" class="form-control" name="wine-country" id="wine-country" placeholder="country" [(ngModel)]="wine.country">
+    </div>
+    <div class="mb-3">
+        <label for="wine-composition" class="form-label">Compostion</label>
+        <input type="text" class="form-control" name="wine-composition" id="wine-composition" placeholder="structured list, e.g. grenache, .7; pino noir, .3;" [(ngModel)]="wineComposition" (ngModelChange)="updateWineComposition()">
+    </div>
+    <div class="mb-3">
+        <label for="wine-notes" class="form-label">Tasting Notes</label>
+        <input type="text" class="form-control" name="wine-notes" id="wine-notes" placeholder="comma separted list, e.g, cherry, papaya, soot" [(ngModel)]="wineNotes" (ngModelChange)="updateWineTastingNotes()">
+    </div>
+    <div class="mb-3">
+        <label for="wine-picked-by" class="form-label">Picked By</label>
+        <input type="text" class="form-control" name="wine-picked-by" id="wine-picked-by" placeholder="comma separted list, e.g, Chris, Nate" [(ngModel)]="winePickedBy" (ngModelChange)="updateWinePickedBy()">
+    </div>
+    <div class="mb-3">
+        <label for="wine-abv" class="form-label">Alcohol by Volume (ABV)</label>
+        <input type="number" class="form-control" name="wine-abv" id="wine-abv" placeholder="ABV in decimal. e.g. 0.09" [(ngModel)]="wine.abv">
+    </div>
+    <div class="mb-3">
+        <label for="wine-description" class="form-label">Description</label>
+        <textarea class="form-control" name="wine-description" id="wine-description" rows="3" [(ngModel)]="wine.description"></textarea>
+    </div>
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-outline-pine" role="button" (click)="submitWine()">Submit</button>
+        <button type="button" class="btn btn-outline-secondary" role="button">Cancel</button>
+    </div>
+</form>

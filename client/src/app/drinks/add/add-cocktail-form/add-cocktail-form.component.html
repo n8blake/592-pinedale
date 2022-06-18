@@ -1,0 +1,22 @@
+<form>
+    <div class="mb-3">
+        <label for="cocktail-name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="cocktail-name" id="cocktail-name" placeholder="name" [(ngModel)]="cocktail.name">
+    </div>
+    <div class="mb-3">
+        <label for="cocktail-components" class="form-label">Components</label>
+        <input type="text" class="form-control" name="cocktail-components" id="cocktail-components" placeholder="comma separated list" [(ngModel)]="cocktailComponents" (ngModelChange)="updateCocktailComponents()">
+    </div>
+    <div class="mb-3">
+        <label for="cocktail-abv" class="form-label">Alcohol by Volume (ABV)</label>
+        <input type="number" class="form-control" name="cocktail-abv" id="cocktail-abv" placeholder="ABV in decimal. e.g. 0.09" [(ngModel)]="cocktail.abv">
+    </div>
+    <div class="mb-3">
+        <label for="cocktail-description" class="form-label">Description</label>
+        <textarea class="form-control" name="cocktail-description" id="cocktail-description" rows="3" [(ngModel)]="cocktail.description"></textarea>
+    </div>
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-outline-pine" role="button" (click)="submitCockail()">Submit</button>
+        <button type="button" class="btn btn-outline-secondary" role="button">Cancel</button>
+    </div>
+</form>

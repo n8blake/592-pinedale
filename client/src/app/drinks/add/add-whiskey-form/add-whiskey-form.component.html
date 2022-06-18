@@ -1,0 +1,30 @@
+<form>
+    <div class="mb-3">
+        <label for="whiskey-name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="whiskey-name" id="whiskey-name" placeholder="name" [(ngModel)]="whiskey.name" />
+    </div>
+    <div class="mb-3">
+        <label for="whiskey-type" class="form-label">Type</label>
+        <input type="text" class="form-control" name="whiskey-type" id="whiskey-type" placeholder="type" [(ngModel)]="whiskey.type">
+    </div>
+    <div class="mb-3">
+        <label for="whiskey-region" class="form-label">Region</label>
+        <input type="text" class="form-control" name="whiskey-region" id="whiskey-region" placeholder="region" [(ngModel)]="whiskey.region">
+    </div>
+    <div class="mb-3">
+        <label for="whiskey-country" class="form-label">Country</label>
+        <input type="text" class="form-control" name="whiskey-country" id="whiskey-country" placeholder="country" [(ngModel)]="whiskey.country">
+    </div>
+    <div class="mb-3">
+        <label for="whiskey-abv" class="form-label">Alcohol by Volume (ABV)</label>
+        <input type="number" class="form-control" name="whiskey-abv" id="whiskey-abv" placeholder="ABV in decimal. e.g. 0.09" [(ngModel)]="whiskey.abv">
+    </div>
+    <div class="mb-3">
+        <label for="whiskey-description" class="form-label">Description</label>
+        <textarea class="form-control" name="whiskey-description" id="whiskey-description" rows="3" [(ngModel)]="whiskey.description"></textarea>
+    </div>
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-outline-pine" role="button" (click)="submitWhiskey()">Submit</button>
+        <button type="button" class="btn btn-outline-secondary" role="button">Cancel</button>
+    </div>
+</form>
