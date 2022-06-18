@@ -26,7 +26,7 @@ export class DrinkService {
   }
 
   addDrink(type: Drinks, drink: Drink){
-    
+    console.log(`${type} : ${drink.name}`);
   }
 
   
