@@ -11,6 +11,12 @@ import { WineListItemComponent } from './drinks/wine-list-item/wine-list-item.co
 import { BeerListItemComponent } from './drinks/beer-list-item/beer-list-item.component';
 import { WhiskeyListItemComponent } from './drinks/whiskey-list-item/whiskey-list-item.component';
 import { CocktailsListItemComponent } from './drinks/cocktails-list-item/cocktails-list-item.component';
+import { AddComponent } from './drinks/add/add.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddCocktailFormComponent } from './drinks/add/add-cocktail-form/add-cocktail-form.component';
+import { AddWineFormComponent } from './drinks/add/add-wine-form/add-wine-form.component';
+import { AddBeerFormComponent } from './drinks/add/add-beer-form/add-beer-form.component';
+import { AddWhiskeyFormComponent } from './drinks/add/add-whiskey-form/add-whiskey-form.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +28,18 @@ import { CocktailsListItemComponent } from './drinks/cocktails-list-item/cocktai
     WineListItemComponent,
     BeerListItemComponent,
     WhiskeyListItemComponent,
-    CocktailsListItemComponent
+    CocktailsListItemComponent,
+    AddComponent,
+    AddCocktailFormComponent,
+    AddWineFormComponent,
+    AddBeerFormComponent,
+    AddWhiskeyFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
