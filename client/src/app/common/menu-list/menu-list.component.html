@@ -1,11 +1,14 @@
 <div class="container">
     <div class="menu-title">~ {{drinkType.toLocaleLowerCase()}} ~</div>
-    <div class="">
+    <div class="menu-list">
         <ng-template ngFor let-drink [ngForOf]="drinks" let-i="index" let-odd="odd" [ngForTrackBy]="trackById">
             <app-wine-list-item *ngIf="drinkType === 'WINES'" [wine]="drink"></app-wine-list-item>
             <app-beer-list-item *ngIf="drinkType === 'BEERS'" [beer]="drink"></app-beer-list-item>
             <app-cocktails-list-item *ngIf="drinkType === 'COCKTAILS'" [cocktail]="drink"></app-cocktails-list-item>
             <app-whiskey-list-item *ngIf="drinkType === 'WHISKIES'" [whiskey]="drink"></app-whiskey-list-item>
         </ng-template>
+        <div class="add-new-drink">
+            <a class="text-secondary" [routerLink]="['/add']" [queryParams]="{type: drinkType.toLocaleLowerCase()}" routerLinkActive="active"><i class="bi bi-plus-circle-fill"></i></a>
+        </div>
     </div>
 </div>

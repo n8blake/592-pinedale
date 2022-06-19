@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DrinkService } from '../../drink.service';
 import { Drinks, Wine } from '../../drinks.model';
 
@@ -14,11 +15,13 @@ export class AddWineFormComponent implements OnInit {
   wineNotes: string = ""
   winePickedBy: string = ""
 
-  constructor(private drinkService: DrinkService) { 
-    this.wine = {id: 0, name: ""}
+  constructor(private drinkService: DrinkService, private router:Router) { 
+    this.wine = {kind:"Wine", name: ""}
+
   }
 
   ngOnInit(): void {
+    
   }
 
   updateWineComposition(): void {
@@ -30,7 +33,15 @@ export class AddWineFormComponent implements OnInit {
   updateWinePickedBy(): void {}
 
   submitWine(): void {
-    this.drinkService.addDrink(Drinks.WINES, this.wine)
+    this.drinkService.addDrink(Drinks.WINES, this.wine).subscribe(result => {
+      //console.log(result)
+      this.router.navigate(['/wine'])
+    })
+  }
+
+  cancel(): void {
+    this.wine = {kind: "Wine", name:""}
+    this.router.navigate(['/wine'])
   }
 
 }

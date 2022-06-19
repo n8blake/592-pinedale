@@ -17,6 +17,10 @@ import { AddCocktailFormComponent } from './drinks/add/add-cocktail-form/add-coc
 import { AddWineFormComponent } from './drinks/add/add-wine-form/add-wine-form.component';
 import { AddBeerFormComponent } from './drinks/add/add-beer-form/add-beer-form.component';
 import { AddWhiskeyFormComponent } from './drinks/add/add-whiskey-form/add-whiskey-form.component';
+import { HttpClientModule } from '@angular/common/http'
+import { DrinkService } from './drinks/drink.service';
+import { DrinkListResolverService } from './drinks/drink-list-resolver.service';
+
 
 @NgModule({
   declarations: [
@@ -39,9 +43,10 @@ import { AddWhiskeyFormComponent } from './drinks/add/add-whiskey-form/add-whisk
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DrinkService, DrinkListResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

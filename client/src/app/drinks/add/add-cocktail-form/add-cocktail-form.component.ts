@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DrinkService } from '../../drink.service';
 import { Cocktial, Drinks } from '../../drinks.model';
 
@@ -12,8 +13,8 @@ export class AddCocktailFormComponent implements OnInit {
   cocktail!: Cocktial
   cocktailComponents: string = ""
 
-  constructor(private drinkService: DrinkService) {
-    this.cocktail = {id: 0, name: ""}
+  constructor(private drinkService: DrinkService, private router: Router) {
+    this.cocktail = { kind:"Cocktail", name: ""}
   }
 
   ngOnInit(): void {
@@ -25,8 +26,15 @@ export class AddCocktailFormComponent implements OnInit {
   }
 
   submitCockail() {
-    console.log('submitting')
-    this.drinkService.addDrink(Drinks.COCKTAILS, this.cocktail)
+    this.drinkService.addDrink(Drinks.COCKTAILS, this.cocktail).subscribe(result => {
+      //console.log(result)
+      this.router.navigate(['/cocktails'])
+    })
+  }
+
+  cancel(): void {
+    this.cocktail = {kind: "Cocktail", name:""}
+    this.router.navigate(['/cocktails'])
   }
 
 }

@@ -10,10 +10,12 @@ import { Drink, Drinks } from 'src/app/drinks/drinks.model';
 })
 export class MenuListComponent implements OnInit {
 
-  public drinks?: Array<Drink>
+  public drinks?: Drink[]
   public drinkType!: Drinks
 
-  constructor(private drinkService: DrinkService, private router: Router, private activatedRoute: ActivatedRoute) {   }
+  constructor(private drinkService: DrinkService, private router: Router) {
+    
+  }
 
   ngOnInit(): void {
     
@@ -32,12 +34,19 @@ export class MenuListComponent implements OnInit {
         this.drinkType = Drinks.WHISKIES
           break
       default :
-        this.drinks = []
+        this.drinkType = Drinks.COCKTAILS
     }
-    this.drinks = this.drinkService.getDrinks(this.drinkType)
-    
+    this.drinkService.getDrinks(this.drinkType).subscribe((drinks: Drink[] | undefined): void => {
+      this.drinks = drinks
+    })
   }
 
-  trackById(index: number, drink: Drink): number { return drink.id; }
+  trackById(index: number, drink: Drink): string { 
+    if(drink._id){
+      return drink._id
+    } else {
+      return ""
+    }
+   }
 
 }

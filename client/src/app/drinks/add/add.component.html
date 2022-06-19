@@ -2,16 +2,13 @@
     <h3 class="form-title" >New Drink</h3>
     <div class="form-instructions">Select drink type</div>
     <form class="form-check form-check-inline d-flex justify-content-center">
-        <input type="radio" class="btn-check" name="options-outlined" id="cocktails-outlined" value="COCKTAILS" [(ngModel)]="drinkType" autocomplete="off" >
+        <input type="radio" class="btn-check" name="options-outlined" id="cocktails-outlined" value="COCKTAILS" [(ngModel)]="drinkType" autocomplete="off" (ngModelChange)="updateQueryParams()">
         <label class="btn btn-outline-pine mx-2" for="cocktails-outlined">Cocktail</label>
-        
-        <input type="radio" class="btn-check" name="options-outlined" id="wine-outline" value="WINES" [(ngModel)]="drinkType" autocomplete="off"/>
+        <input type="radio" class="btn-check" name="options-outlined" id="wine-outline" value="WINES" [(ngModel)]="drinkType" autocomplete="off" (ngModelChange)="updateQueryParams()"/>
         <label class="btn btn-outline-burgundy mx-2" for="wine-outline">Wine</label>
-        
-        <input type="radio" class="btn-check" name="options-outlined" id="beer-outlined" autocomplete="off" [(ngModel)]="drinkType" value="BEERS">
+        <input type="radio" class="btn-check" name="options-outlined" id="beer-outlined" autocomplete="off" [(ngModel)]="drinkType" value="BEERS" (ngModelChange)="updateQueryParams()">
         <label class="btn btn-outline-yellow mx-2" for="beer-outlined">Beer</label>
-        
-        <input type="radio" class="btn-check" name="options-outlined" id="whiskey-outlined" autocomplete="off" [(ngModel)]="drinkType" value="WHISKIES">
+        <input type="radio" class="btn-check" name="options-outlined" id="whiskey-outlined" autocomplete="off" [(ngModel)]="drinkType" value="WHISKIES" (ngModelChange)="updateQueryParams()">
         <label class="btn btn-outline-whiskey mx-2" for="whiskey-outlined">Whiskey</label>
     </form>
     

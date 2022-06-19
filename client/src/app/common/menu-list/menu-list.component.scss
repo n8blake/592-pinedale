@@ -6,3 +6,14 @@
     margin-bottom: 30pt;
     font-weight: 100;
 }
+
+.add-new-drink {
+    position: relative;
+    display: flex;
+    margin-top: 20pt;
+    justify-content: center;
+}
+
+.add-new-drink > a.active {
+    display: none;
+}
